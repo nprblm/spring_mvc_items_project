@@ -1,0 +1,362 @@
+html, body {
+
+    padding:0;
+
+    margin:0;
+
+}
+
+p{
+
+    color: white;
+
+    font-style: revert;
+
+    font-family: 'Horizon', sans-serif;
+
+    font-weight: normal;
+}
+
+hr{
+    margin: 20px 0;
+
+    padding: 0;
+
+    height: 10px;
+
+    border: none;
+
+    border-top: 1px solid #333;
+
+    box-shadow: 0 10px 10px -10px #5b5b5b inset;
+
+}
+
+header{
+
+    font-size: 20px;
+
+    background-color: rgba(255,255,255,0.05);
+
+    width: 99%;
+
+    margin-left: 0.5%;
+
+    margin-right: 0.5%;
+
+    height: 140px;
+
+    backdrop-filter: blur(5px);
+
+    border-bottom-left-radius: 25px;
+
+    border-bottom-right-radius: 25px;
+
+    border: 2px solid black;
+
+    border-bottom-color: rgba(255,255,255,0.2);
+    border-top-color: rgba(255,255,255,0.2);
+    border-left-color: rgba(255,255,255,0.2);
+    border-right-color: rgba(255,255,255,0.2);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+body {
+
+    background-image: url("https://cdn.pixabay.com/photo/2014/06/16/23/39/black-370118_960_720.png");
+
+    background-attachment: scroll;
+
+    background-size: 100%;
+
+}
+
+.center_block{
+
+    display: inline-block;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 80%;
+
+    min-height: 50%;
+
+    margin-top: 20px;
+
+    margin-left: 10%;
+
+    margin-right: 10%;
+}
+
+.center {
+
+    display: inline-block;
+
+    width: 40%;
+
+    margin-top: 20px;
+
+    margin-left: 30%;
+
+    padding-left: 10px;
+
+    padding-top: 10px;
+
+    padding-right: 10px;
+
+    padding-bottom: 10px;
+
+    top: 50px;
+
+    border: 2px solid black;
+
+    border-bottom-color: rgba(255,255,255,0.2);
+    border-top-color: rgba(255,255,255,0.2);
+    border-left-color: rgba(255,255,255,0.2);
+    border-right-color: rgba(255,255,255,0.2);
+
+    background-color: rgba(0,0,0,0.001);
+
+    text-align: center;
+
+    backdrop-filter: blur(2px);
+
+    transition: backdrop-filter 1s linear,
+    background-color 1s linear,
+    border-bottom-color 1s linear,
+    border-top-color 1s linear,
+    border-left-color 1s linear,
+    border-right-color 1s linear;
+
+    border-radius: 25px;
+
+}
+
+border{
+    backdrop-filter: blur(5px);
+}
+
+#back_button{
+
+    margin-left: 25px;
+
+    margin-right: 25px;
+
+    width: 140px;
+
+    height: 100px;
+
+    background-color: rgba(0,0,0,0.001);
+
+    border: 2px solid black;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    backdrop-filter: blur(2px);
+
+    border-radius: 25px;
+
+    border-bottom-color: rgba(255,255,255,0.1);
+    border-top-color: rgba(255,255,255,0.1);
+    border-left-color: rgba(255,255,255,0.1);
+    border-right-color: rgba(255,255,255,0.1);
+
+    transition: backdrop-filter 1s linear,
+    background-color 1s linear,
+    border-bottom-color 1s linear,
+    border-top-color 1s linear,
+    border-left-color 1s linear,
+    border-right-color 1s linear;
+
+}
+
+#back_button:hover {
+
+    backdrop-filter: blur(5px);
+
+    background-color: rgba(255,255,255,0.2);
+
+    border-bottom-color: rgba(255,255,255,0.5);
+    border-top-color: rgba(255,255,255,0.5);
+    border-left-color: rgba(255,255,255,0.5);
+    border-right-color: rgba(255,255,255,0.5);
+}
+
+#edit_button{
+
+    margin-left: 25px;
+
+    margin-right: 25px;
+
+    width: 140px;
+
+    height: 100px;
+
+    background-color: rgba(0,0,0,0.001);
+
+    border: 2px solid black;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    backdrop-filter: blur(2px);
+
+    border-radius: 25px;
+
+    border-bottom-color: rgba(255,255,255,0.1);
+    border-top-color: rgba(255,255,255,0.1);
+    border-left-color: rgba(255,255,255,0.1);
+    border-right-color: rgba(255,255,255,0.1);
+
+    transition: backdrop-filter 1s linear,
+    background-color 1s linear,
+    border-bottom-color 1s linear,
+    border-top-color 1s linear,
+    border-left-color 1s linear,
+    border-right-color 1s linear;
+
+}
+
+#edit_button:hover {
+
+    backdrop-filter: blur(5px);
+
+    background-color: rgba(255,255,255,0.2);
+
+    border-bottom-color: rgba(255,255,255,0.5);
+    border-top-color: rgba(255,255,255,0.5);
+    border-left-color: rgba(255,255,255,0.5);
+    border-right-color: rgba(255,255,255,0.5);
+}
+
+#delete_form{
+
+    font_size: 20px;
+
+    margin-left: 25px;
+
+    margin-right: 25px;
+
+    width: 140px;
+
+    height: 104px;
+
+    background-color: transparent;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    backdrop-filter: blur(2px);
+
+    border-radius: 25px;
+
+    border-bottom-color: rgba(255,255,255,0.1);
+    border-top-color: rgba(255,255,255,0.1);
+    border-left-color: rgba(255,255,255,0.1);
+    border-right-color: rgba(255,255,255,0.1);
+
+    transition: backdrop-filter 1s linear,
+    background-color 1s linear,
+    border-bottom-color 1s linear,
+    border-top-color 1s linear,
+    border-left-color 1s linear,
+    border-right-color 1s linear;
+
+}
+
+#delete_form:hover {
+
+    backdrop-filter: blur(5px);
+
+    background-color: rgba(255,0,0,0.2);
+
+    border-bottom-color: rgba(255,255,255,0.5);
+    border-top-color: rgba(255,255,255,0.5);
+    border-left-color: rgba(255,255,255,0.5);
+    border-right-color: rgba(255,255,255,0.5);
+}
+
+#delete_button{
+
+    font_size: 20px;
+
+    color: white;
+
+    font-style: revert;
+
+    font-family: 'Horizon', sans-serif;
+
+    font-weight: normal;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.001);
+
+    border: 2px solid black;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    backdrop-filter: blur(2px);
+
+    border-radius: 25px;
+
+    border-bottom-color: rgba(255,255,255,0.1);
+    border-top-color: rgba(255,255,255,0.1);
+    border-left-color: rgba(255,255,255,0.1);
+    border-right-color: rgba(255,255,255,0.1);
+
+    transition:
+    border-bottom-color 1s linear,
+    border-top-color 1s linear,
+    border-left-color 1s linear,
+    border-right-color 1s linear;
+}
+
+#delete_button.hover{
+
+    border-bottom-color: rgba(255,255,255,0.5);
+    border-top-color: rgba(255,255,255,0.5);
+    border-left-color: rgba(255,255,255,0.5);
+    border-right-color: rgba(255,255,255,0.5);
+}
+
+img {
+
+    border: 2px solid black;
+
+    max-width: 90%;
+
+    object-fit:cover;
+
+    border-radius: 25px;
+
+    border-bottom-color: rgba(255,255,255,0.3);
+    border-top-color: rgba(255,255,255,0.3);
+    border-left-color: rgba(255,255,255,0.3);
+    border-right-color: rgba(255,255,255,0.3);
+}
+

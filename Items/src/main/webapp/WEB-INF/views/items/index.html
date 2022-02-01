@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <link href="/sources/css/index.css" th:href="@{/sources/css/index.css}" rel="stylesheet" />
+</head>
+
+<body>
+
+<header>
+        <a href="/items/new" style ="text-decoration: none">
+            <div id="create_button">
+                <p>Create</p>
+            </div>
+        </a>
+</header>
+<div th:each="items : ${item}">
+    <a th:href="@{/items/{id}(id=${items.getId()})}">
+        <div class="center">
+
+                <img th:src="@{${items.getImage()}}" alt="" height="200"/>
+                <br/>
+                <p th:text="${items.getName()}">Name</p>
+                <hr/>
+                <p th:text="${items.getDescription()}">Description</p>
+                <br/>
+        </div>
+    </a>
+</div>
+
+</body>
+</html>

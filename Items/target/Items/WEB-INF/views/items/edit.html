@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Item</title>
+    <link href="/sources/css/edit.css" th:href="@{/sources/css/edit.css}" rel="stylesheet" />
+</head>
+
+<body>
+
+<header>
+    <a th:href="@{/items/{id}(id=${item.getId()})}" style ="text-decoration: none">
+        <div id="back_button">
+            <p>Back</p>
+        </div>
+    </a>
+</header>
+
+<div id="center_block">
+    <div class="center">
+        <form th:method="PATCH" th:action="@{/items/{id}(id=${item.getId()})}" th:object="${item}">
+            <div id="center_form">
+                <label for="name">Enter name: </label>
+                <input class="text_field" type="text" th:field="*{name}" id="name" size="80%" height="20px" style ="font-size: 20px;"/>
+                <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>
+                <br/>
+                <label for="description">Enter description: </label>
+                <input class="text_field" type="text" th:field="*{description}" id="description" size="80%" height="20px" style ="font-size: 20px;"/>
+                <div style="color:red" th:if="${#fields.hasErrors('description')}" th:errors="*{description}">Description Error</div>
+                <br/>
+                <label for="image">Enter image: </label>
+                <input class="text_field" type="text" th:field="*{image}" id="image" size="80%" height="20px" style ="font-size: 20px;"/>
+                <div style="color:red" th:if="${#fields.hasErrors('image')}" th:errors="*{image}">Image Error</div>
+                <br/>
+            </div>
+            <div id="center_button">
+                <input id="update_button" type="submit" value="Update" style='font-size: 20px;'/>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

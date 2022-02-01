@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Item</title>
+    <link href="/sources/css/show.css" th:href="@{/sources/css/show.css}" rel="stylesheet" />
+</head>
+
+<body>
+<header>
+    <a href="/items" style ="text-decoration: none">
+        <div id="back_button">
+            <p>Back</p>
+        </div>
+    </a>
+    <a th:href="@{/items/{id}/edit(id=${item.getId()})}" style ="text-decoration: none">
+        <div id="edit_button">
+            <p>Edit</p>
+        </div>
+    </a>
+        <form id="delete_form" th:method="DELETE" th:action="@{/items/{id}(id=${item.getId()})}" style ="text-decoration: none">
+            <br/>
+            <input id="delete_button" type="submit" value="Delete" style='font-size: 20px;'/>
+            <br/>
+        </form>
+
+</header>
+<div class="center_block">
+    <div class="center">
+        <img th:src="@{${item.getImage()}}" th:height="250"/>
+        <hr/>
+        <p th:text="${'ID:    '+item.getId()}">Id</p>
+        <hr/>
+        <p th:text="${'Name:    '+item.getName()}">Name</p>
+        <hr/>
+        <p th:text="${'Description:    ' + item.getDescription()}">Description</p>
+    </div>
+</div>
+
+</body>
+</html>
